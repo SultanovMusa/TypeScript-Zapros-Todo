@@ -1,0 +1,106 @@
+.container {
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+
+	h1 {
+		margin-top: 2rem;
+		margin-left: 37rem;
+	}
+	hr {
+		color: red;
+	}
+	.content {
+		margin-top: 3rem;
+		display: flex;
+		justify-content: space-between;
+		flex-direction: column;
+		gap: 1rem;
+
+		input {
+			padding: 1rem;
+			border: 1px solid white;
+			border-radius: 1rem;
+			background: transparent;
+			height: 2rem;
+			width: 15rem;
+			margin-left: 35rem;
+			cursor: pointer;
+		}
+		input::placeholder {
+			color: white;
+		}
+		button {
+			cursor: pointer;
+			width: 5rem;
+			border: 1px solid white;
+			background: transparent;
+			height: 1.8rem;
+			border-radius: 1rem;
+			margin-left: 40rem;
+		}
+	}
+	.car {
+		gap: 1rem;
+		width: 30rem;
+		backdrop-filter: blur(3px);
+		padding: 5rem;
+		margin-top: 2rem;
+		margin-left: 28rem;
+		border: 1px solid white;
+		display: flex;
+		justify-content: space-between;
+		flex-direction: column;
+
+		img {
+			border-radius: 1rem;
+			width: 20rem;
+			height: 20rem;
+		}
+		button {
+			cursor: pointer;
+			width: 5rem;
+			border: 1px solid white;
+			background: transparent;
+			height: 1.8rem;
+			border-radius: 1rem;
+			// margin-left: 40rem;
+		}
+	}
+	.cars {
+		gap: 1rem;
+		width: 28rem;
+		backdrop-filter: blur(3px);
+		padding: 5rem;
+		margin-top: 2rem;
+		margin-left: 30rem;
+		// background-color: rgba(2, 2, 55, 0.47);
+		border: 1px solid blue;
+		display: flex;
+		justify-content: space-between;
+		flex-direction: column;
+
+		input {
+			padding: 1rem;
+			border: 1px solid blue;
+			border-radius: 1rem;
+			background: transparent;
+			height: 2rem;
+			width: 15rem;
+			// margin-left: 35rem;
+			cursor: pointer;
+		}
+		input::placeholder {
+			color: blue;
+		}
+		button {
+			cursor: pointer;
+			width: 5rem;
+			border: 1px solid blue;
+			background: transparent;
+			height: 1.8rem;
+			border-radius: 1rem;
+			// margin-left: 40rem;
+		}
+	}
+}

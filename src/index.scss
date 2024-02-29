@@ -1,0 +1,43 @@
+::-webkit-scrollbar {
+	width: 4px;
+	height: 4px;
+}
+::-webkit-scrollbar-track {
+	//background-color: #212529;
+	background: #000000;
+}
+::-webkit-scrollbar-thumb {
+	//background: linear-gradient(to bottom, #9A00D7, #0084FF);
+	background: #6741d9;
+	border-radius: 10px;
+}
+* {
+	box-sizing: border-box;
+	margin: 0;
+}
+ul,
+ol {
+	padding: 0;
+}
+li {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+}
+html {
+	color-scheme: dark;
+}
+body {
+	font-family: "Inter", sans-serif;
+	background-image: url("https://img2.akspic.ru/crops/4/4/7/2/5/152744/152744-uzor-krasochnost-liniya-chernyy-temnota-7680x4320.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	color: white !important;
+}
+.container {
+	width: 100%;
+	max-width: 1280px;
+	margin-inline: auto;
+	padding-inline: 20px;
+}
