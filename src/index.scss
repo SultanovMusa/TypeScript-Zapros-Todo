@@ -1,13 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+
 ::-webkit-scrollbar {
 	width: 4px;
 	height: 4px;
 }
 ::-webkit-scrollbar-track {
-	//background-color: #212529;
 	background: #000000;
 }
 ::-webkit-scrollbar-thumb {
-	//background: linear-gradient(to bottom, #9A00D7, #0084FF);
 	background: #6741d9;
 	border-radius: 10px;
 }
@@ -33,6 +33,7 @@ body {
 	background-image: url("https://img2.akspic.ru/crops/4/4/7/2/5/152744/152744-uzor-krasochnost-liniya-chernyy-temnota-7680x4320.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
+	background-attachment: fixed;
 	color: white !important;
 }
 .container {

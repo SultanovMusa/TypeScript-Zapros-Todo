@@ -60,79 +60,92 @@ const TodoList = () => {
 	}, []);
 
 	return (
-		<div className={scss.container}>
-			<h1>TodoList</h1>
-			<hr />
-			<div className={scss.content}>
-				<input
-					type="Email"
-					placeholder="Email"
-					value={email}
-					onChange={(e) => setEmail(e.target.value)}
-				/>
-				<input
-					type="Password"
-					placeholder="Password"
-					value={password}
-					onChange={(e) => setPassword(e.target.value)}
-				/>
-				<input
-					type="url"
-					placeholder="Url"
-					value={image}
-					onChange={(e) => setImage(e.target.value)}
-				/>
-				<button onClick={handleAdd}>Add Todo</button>
-				<hr />
-			</div>
-
-			{todos.map((item) => (
-				<div key={item._id}>
-					{editId === item._id! ? (
-						<div className={scss.cars}>
+		<div className={scss.Form}>
+			<div className="container">
+				<div className={scss.content}>
+					<div>
+						<div className={scss.logo}>
+							<h1>TodoList Redux-Toolkit</h1>
+						</div>
+						<hr />
+						<div className={scss.box}>
 							<input
 								type="Email"
 								placeholder="Email"
-								value={email2}
-								onChange={(e) => setEmail2(e.target.value)}
+								value={email}
+								onChange={(e) => setEmail(e.target.value)}
 							/>
 							<input
 								type="Password"
 								placeholder="Password"
-								value={password2}
-								onChange={(e) => setPassword2(e.target.value)}
+								value={password}
+								onChange={(e) => setPassword(e.target.value)}
 							/>
 							<input
 								type="url"
 								placeholder="Url"
-								value={image2}
-								onChange={(e) => setImage2(e.target.value)}
+								value={image}
+								onChange={(e) => setImage(e.target.value)}
 							/>
-							<button onClick={() => patchHandle(item._id!)}>Save </button>
-							<button onClick={() => setEditId(null)}>Cancel</button>
-							<hr />
+							<button onClick={handleAdd}>Add Todo</button>
 						</div>
-					) : (
-						<>
-							<div className={scss.car}>
-								<p>Email: {item.email}</p>
-								<p>Password: {item.password}</p>
-								<img src={item.img} alt="Todo image" />
-								<button onClick={() => deleteHandle(item._id!)}>Delete</button>
-								<button
-									onClick={() => {
-										setEditId(item._id!);
-										setEmail2(item.email);
-										setPassword2(item.password);
-										setImage2(item.img);
-									}}>
-									Edit
-								</button>
-							</div>
-						</>
-					)}
+						<hr />
+					</div>
+
+					{todos.map((item) => (
+						<div key={item._id}>
+							{editId === item._id! ? (
+								<div className={scss.cars}>
+									<input
+										type="Email"
+										placeholder="Email"
+										value={email2}
+										onChange={(e) => setEmail2(e.target.value)}
+									/>
+									<input
+										type="Password"
+										placeholder="Password"
+										value={password2}
+										onChange={(e) => setPassword2(e.target.value)}
+									/>
+									<input
+										type="url"
+										placeholder="Url"
+										value={image2}
+										onChange={(e) => setImage2(e.target.value)}
+									/>
+									<div className={scss.btn}>
+										<button onClick={() => patchHandle(item._id!)}>
+											Save{" "}
+										</button>
+										<button onClick={() => setEditId(null)}>Cancel</button>
+									</div>
+								</div>
+							) : (
+								<div className={scss.car}>
+									<p>Email: {item.email}</p>
+									<p>Password: {item.password}</p>
+									<img src={item.img} alt="Todo image" />
+									<div className={scss.btn}>
+										<button onClick={() => deleteHandle(item._id!)}>
+											Delete
+										</button>
+										<button
+											onClick={() => {
+												setEditId(item._id!);
+												setEmail2(item.email);
+												setPassword2(item.password);
+												setImage2(item.img);
+											}}>
+											Edit
+										</button>
+									</div>
+								</div>
+							)}
+						</div>
+					))}
 				</div>
-			))}
+			</div>
 		</div>
 	);
 };

@@ -1,84 +1,143 @@
-.container {
-	display: flex;
-	justify-content: space-between;
-	flex-direction: column;
+.Form {
+	$hr-color: white;
+	$hr-height: 2px;
+	$hr-margin: 20px 0;
+	$hr-box-shadow: 5px 5px 25px 8px rgb(181, 4, 89);
 
-	h1 {
-		margin-top: 2rem;
-		margin-left: 37rem;
-	}
 	hr {
-		color: red;
+		border: none;
+		height: $hr-height;
+		background-color: $hr-color;
+		margin: $hr-margin;
+		box-shadow: $hr-box-shadow;
 	}
 	.content {
-		margin-top: 3rem;
-		display: flex;
-		justify-content: space-between;
-		flex-direction: column;
-		gap: 1rem;
-
-		input {
-			padding: 1rem;
-			border: 1px solid white;
-			border-radius: 1rem;
-			background: transparent;
-			height: 2rem;
-			width: 15rem;
-			margin-left: 35rem;
-			cursor: pointer;
-		}
-		input::placeholder {
-			color: white;
-		}
-		button {
-			cursor: pointer;
-			width: 5rem;
-			border: 1px solid white;
-			background: transparent;
-			height: 1.8rem;
-			border-radius: 1rem;
-			margin-left: 40rem;
-		}
-	}
-	.car {
-		gap: 1rem;
-		width: 30rem;
-		backdrop-filter: blur(3px);
-		padding: 5rem;
-		margin-top: 2rem;
-		margin-left: 28rem;
-		border: 1px solid white;
 		display: flex;
 		justify-content: space-between;
 		flex-direction: column;
 
-		img {
-			border-radius: 1rem;
+		.logo {
+			margin-top: 1rem;
+			text-align: center;
+			h1 {
+				display: inline;
+				background: var(
+					--2,
+					linear-gradient(
+						97deg,
+						rgb(245, 242, 243) 10.04%,
+						rgb(255, 0, 102) 61.84%,
+						#e9036a
+					)
+				);
+				background-clip: text;
+				-webkit-text-fill-color: transparent;
+			}
+		}
+
+		.box {
+			margin-left: 30rem;
+			width: 18rem;
+			height: 18rem;
+			margin-top: 2rem;
+			display: flex;
+			justify-content: space-between;
+			flex-direction: column;
+			padding: 1.5rem;
+			gap: 1rem;
+			margin-bottom: 2rem;
+
+			input {
+				padding: 1rem;
+				border: 1px solid white;
+				border-radius: 1rem;
+				background: transparent;
+				height: 2rem;
+				width: 15rem;
+				cursor: pointer;
+			}
+			input::placeholder {
+				color: white;
+			}
+			input:hover {
+				transition: 0.5s;
+				border: 1px solid rgb(255, 0, 102);
+				box-shadow: 5px 5px 25px 8px rgb(181, 4, 89);
+			}
+
+			button {
+				cursor: pointer;
+				width: 5rem;
+				border: 1px solid white;
+				background: transparent;
+				height: 1.8rem;
+				border-radius: 1rem;
+				margin-left: 5rem;
+			}
+		}
+
+		.car {
 			width: 20rem;
-			height: 20rem;
-		}
-		button {
-			cursor: pointer;
-			width: 5rem;
+			display: flex;
+			justify-content: space-between;
+			flex-direction: column;
+			backdrop-filter: blur(3px);
 			border: 1px solid white;
-			background: transparent;
-			height: 1.8rem;
-			border-radius: 1rem;
-			// margin-left: 40rem;
+			margin-top: 1rem;
+			gap: 1rem;
+			padding: 2rem;
+			margin-left: 29rem;
+			border: none;
+			margin-bottom: 2rem;
+
+			img {
+				border-radius: 10px;
+				width: 15.5rem;
+				height: 10rem;
+			}
+			p{
+				cursor: pointer;
+			}
+			img:hover{
+				transition: 0.5s;
+				border: 1px solid rgb(255, 0, 102);
+			}
+			.btn {
+				display: flex;
+				gap: 1rem;
+				margin-left: 2.5rem;
+
+				button {
+					cursor: pointer;
+					width: 5rem;
+					border: 1px solid white;
+					background: transparent;
+					height: 1.8rem;
+					border-radius: 1rem;
+				}
+				button:hover{
+					transition: 0.5s;
+					border: 1px solid rgb(255, 0, 102);
+				}
+			}
+		}
+		.car:hover{
+			transition: 0.5s;
+			box-shadow: 5px 0px 15px 8px rgb(181, 4, 89);
 		}
 	}
 	.cars {
-		gap: 1rem;
-		width: 28rem;
-		backdrop-filter: blur(3px);
-		padding: 5rem;
-		margin-top: 2rem;
-		margin-left: 30rem;
-		// background-color: rgba(2, 2, 55, 0.47);
-		border: 1px solid blue;
 		display: flex;
 		justify-content: space-between;
 		flex-direction: column;
+		gap: 1rem;
+		width: 20rem;
+		backdrop-filter: blur(3px);
+		padding: 2rem;
+		margin-top: 2rem;
+		margin-left: 30rem;
+		margin-bottom: 2rem;
+		border-radius: 1rem;
 
 		input {
 			padding: 1rem;
@@ -87,20 +146,32 @@
 			background: transparent;
 			height: 2rem;
 			width: 15rem;
-			// margin-left: 35rem;
 			cursor: pointer;
 		}
 		input::placeholder {
 			color: blue;
 		}
-		button {
-			cursor: pointer;
-			width: 5rem;
-			border: 1px solid blue;
-			background: transparent;
-			height: 1.8rem;
-			border-radius: 1rem;
-			// margin-left: 40rem;
+		.btn{
+			display: flex;
+				gap: 1rem;
+				margin-left: 2rem;
+
+				button {
+					cursor: pointer;
+					width: 5rem;
+					background: transparent;
+					border: 1px solid blue;
+					height: 1.8rem;
+					border-radius: 1rem;
+				}
+				button:hover{
+					transition: 0.5s;
+					box-shadow: 0px 5px 25px 8px blue;
+				}
 		}
+	}
+	.cars:hover{
+		transition: 0.5s;
+		box-shadow: 0px 5px 25px 8px blue;
 	}
 }
